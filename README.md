@@ -14,22 +14,18 @@ This project documents a data analysis process which was developed using a pre-d
 <b>Count Fraudulent Transactions by Category, Age and Merchant</b>
  - index=your_index_name isFraud=1 | stats count AS fraud_count BY "type" | sort - fraud_count
 In this rule it is used to filter all the transactions to find the fraudulent ones and group them based on category, age and merchant (stats count AS fraud_count BY "type"), while sorting from highest to lowest fraud count (sort - fraud_count).  
-<br /> <br/>
 
 <b>Fraud detected by Age, Category, Step (Month), Gender</b>
  - index=your_index_name isFraud=1 | stats count AS fraud_count BY age category step gender | sort - fraud_count
 In this rule, it is mainly used to find trends in the dataset of fradulent transactions, as well as seeing spikes based on months and comparing target age and gender patterns.   
-<br /> <br/>
 
 <b>Gender performed the most fraudulent activities and in what category</b>
  - index=your_index_name isFraud=1 | stats count AS fraud_count BY gender category | sort - fraud_count
 In this rule, it is basically used to list out the gender that commited the most fraud and the specific category they committed the crime in.
-<br /> <br/>
 
 <b>Age group performed the most fraudulent activities and to what merchant</b>
  - index=your_index_name isFraud=1 | stats count AS fraud_count BY age merchant | sort - fraud_count
 In this rule, it is basically used to list out how age group X committed the most fraud against the specific merchant of Y. 
-<br /> <br/>
 
 
 
