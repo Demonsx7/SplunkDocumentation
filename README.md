@@ -10,6 +10,8 @@ This project documents a data analysis process which was developed using a pre-d
 - <b>SPL</b>
 - <b>CSV files</b>
 
+<h2>Rules incorporated within Splunk</h2>
+
 <!--
  ```diff
 - text in red
